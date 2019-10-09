@@ -12,6 +12,7 @@ function checkForm()
 if(username.length == 0) //email verified by using email type
 {
   alert("Invalid Username. Please enter an email as your user name.");
+  event.preventDefault();
   return false;
 }
 if(password.length == 0)
