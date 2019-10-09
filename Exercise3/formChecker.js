@@ -1,4 +1,8 @@
-var username = document.getElementById("username").value;
+
+
+function checkForm()
+{
+  var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 var madeon = document.getElementById("madeon").value;
 var daftpunk = document.getElementById("daftpunk").value;
@@ -6,9 +10,6 @@ var frankocean = document.getElementById("frankocean").value;
 var freeshipping = document.getElementById("freeshipping");
 var threedayshipping = document.getElementById("threeday");
 var overnightshipping = document.getElementById("overnight");
-
-function checkForm()
-{
 if(username.length == 0) //email verified by using email type
 {
   alert("Invalid Username. Please enter an email as your user name.");
