@@ -7,25 +7,30 @@ $madeon = $_POST["madeon"];
 $daftpunk = $_POST["daftpunk"];
 $frankocean = $_POST["frankocean"];
 $shipping = $_POST["shipping"];
-$shippingcost;
+$shippingcost = 0;
 if($shipping == "freeshipping")
 {
+  $shipping = "7 Day Shipping";
   $shippingcost = 0;
 }
 else if($shipping == "threeday")
 {
+$shipping = "3 Day Shipping";
   $shippingcost = 5;
 }
 else if($shipping == "overnight")
 {
+$shipping = "Overnight Shipping";
   $shippingcost = 50;
 }
+
+$totalcost = ($shippingcost) + ($frankocean * 12) +  ($daftpunk * 7) +  ($madeon * 10);
 
 echo "<h1> Order Confirmation </h1>";
 echo "<h3> Thank you for your order! </h3>";
 echo "<br> <h4> User Information: </h4>";
 echo "Username:" . $username . "<br>";
-echo "Password:" . $password . "<br>";
+echo "Password:" . $password . "<br><br>";
 
 echo "<table style = 'width: 100%; border: 1px solid black; text-align: center; margin: 0px auto;'> ";
 echo "<tr>";
@@ -59,12 +64,14 @@ echo"</tr>";
 echo "<tr>";
 echo "<th> Shipping </th>";
 echo "<td colspan = 2 >" . $shipping . "</td>";
-echo "<td>" . $shippingcost "</td>";
+echo "<td> $" . $shippingcost . "</td>";
 echo"</tr>";
 
 echo "<tr>";
-echo "<th colspan = 3> Total Cost </th>";
-echo "<th> $" . $shippingcost + $frankocean * 12 +  $daftpunk * 7 +  $madeon * 10 "</th>";
+echo "<th> Total Cost </th>";
+echo "<td> </td>";
+echo "<td> </td>";
+echo "<td> $" . $totalcost  . "</td>";
 echo"</tr>";
 
 echo "</table>";

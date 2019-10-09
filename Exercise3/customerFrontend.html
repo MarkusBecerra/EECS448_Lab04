@@ -11,7 +11,7 @@
 
   <body>
       <h1> EPIC CD STORE </h1>
-      <form action="customerBackend.php" method="post" onsubmit="return checkForm()">
+      <form action="customerBackend.php" method="post" onclick="checkForm()">
         <div class ="userpass">
 
           <b> Username/Email: </b> <input type="email" placeholder="Username@domain.com" id="username" name="username">
@@ -49,7 +49,7 @@
               </div>
               <div class = "buttons">
           <input type="reset" value = "Reset Form">
-          <input type="submit" value = "Purchase">
+          <input type="submit" value = "Purchase" onsubmit="checkForm()">
     </div>
   </form>
 </body>
