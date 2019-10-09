@@ -1,7 +1,7 @@
 <html>
 <head>
   <title> EPIC CD STORE </title>
-  <link href="myStyle.css"
+  <link href="style.css"
             rel="stylesheet"
             type="text/css"/>
     <script type="text/javascript"
@@ -14,25 +14,25 @@
       <form action="customerBackend.php" method="post" onsubmit="return checkForm()">
         <div class ="userpass">
 
-          Username/Email: <input type="email" placeholder="Username@domain.com" id="username" name="username">
-          Password: <input type="password" placeholder="Password" id="password" name="password"><br>
+          <b> Username/Email: </b> <input type="email" placeholder="Username@domain.com" id="username" name="username">
+        <b>  Password: </b> <input type="password" placeholder="Password" id="password" name="password"><br>
 
       </div>
 
       <div class = "CDs">
-        <div class = "album">
+        <div class = "album1">
           <img src="https://images-na.ssl-images-amazon.com/images/I/61XULTvSzAL._SL1500_.jpg"><br>
           <h2> Madeon - Adventure: $10 </h2><br>
           Quantity: <input type="number" name="madeon" id="madeon" min=0 value=0><br><br>
           </div>
 
-          <div class = "album">
+          <div class = "album2">
             <img src= "https://images-na.ssl-images-amazon.com/images/I/61Uxg-SWExL._SL1500_.jpg"><br>
-            <h2> Daft Punk - Random Access Memories: $7 </h2><br>
+            <h2> Daft Punk - RAM: $7 </h2><br>
             Quantity: <input type="number" name="daftpunk" id="daftpunk" min=0 value=0><br><br>
             </div>
 
-            <div class = "album">
+            <div class = "album3">
               <img src = "https://images.genius.com/a2a52c3c2502d8694c6ab464beadd7b1.1000x1000x1.jpg"><br>
               <h2> Frank Ocean - Channel Orange: $12 </h2><br>
               Quantity: <input type="number" name="frankocean" id="frankocean" min=0 value=0><br><br>
@@ -41,13 +41,13 @@
               </div>
 
               <div class = "shipping">
-              			Shipping options:<br>
+              		<b>	Shipping options:</b><br>
               		<input type="radio" name="shipping" id="freeshipping" value="freeshipping"> 7 Day Shipping (Free)<br>
                   <input type="radio" name="shipping" id="threeday" value= "threeday"> 3 Day Shipping ($5)<br>
               		<input type="radio" name="shipping" id="overnight" value= "overnight"> Overnight Shipping ($50)<br><br>
 
               </div>
-              <div>
+              <div class = "buttons">
           <input type="reset" value = "Reset Form">
           <input type="submit" value = "Purchase">
     </div>
